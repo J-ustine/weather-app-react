@@ -19,7 +19,7 @@ export default function Container() {
           <img
             className="location"
             src="https://www.materialui.co/materialIcons/communication/location_on_white_192x192.png"
-            alt="location"
+            alt="location-icon"
             width="35"
           />
         </div>
@@ -38,17 +38,22 @@ export default function Container() {
         <div className="col-4">
           <div className="temperature">
             <span id="number">20</span>
-            <a id="celsius" className="active" href="#" rel="noreferrer">
+            <button id="celsius" className="active unit">
               °C
-            </a>
+            </button>
             <span className="unit"> |</span>
-            <a id="farenheit" href="#" rel="noreferrer">
+            <button id="farenheit" className="unit">
               °F
-            </a>
+            </button>
           </div>
         </div>
         <div className="col-2">
-          <img className="media-meteo" id="mediaMeteo" src={Sun} alt="" />
+          <img
+            className="media-meteo"
+            id="mediaMeteo"
+            src={Sun}
+            alt="sun-icon"
+          />
         </div>
       </div>
       <div className="row prevision" id="forecast"></div>

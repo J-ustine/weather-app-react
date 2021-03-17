@@ -44,9 +44,13 @@ h3 {
   color: white;
   top: -63px;
 }
-.temperature a {
+.temperature .unit {
   position: relative;
   top: -63px;
+}
+button {
+  background-color: transparent;
+  border: none;
 }
 .active {
   text-decoration: none;
