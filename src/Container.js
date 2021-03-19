@@ -1,20 +1,20 @@
 import React, { useState } from "react";
 import Search from "./Search";
+import FormattedDate from "./FormattedDate";
 import Icon from "./Icon";
 import axios from "axios";
 
 export default function Container(props) {
   const [WeatherData, setWeatherData] = useState({ ready: false });
 
-  function handleRequest(event) {
+  function handleRequest(response) {
     setWeatherData({
       ready: true,
-      temperature: event.data.main.temp,
-      date: "12 March",
-      humidity: event.data.main.humidity,
-      wind: event.data.wind.speed,
-      city: event.data.name,
-      description: event.data.weather[0].description,
+      temperature: response.data.main.temp,
+      date: new Date(response.data.dt * 1000),
+      humidity: response.data.main.humidity,
+      wind: response.data.wind.speed,
+      description: response.data.weather[0].description,
     });
   }
 
@@ -26,8 +26,10 @@ export default function Container(props) {
           <div className="col-4">
             <div className="meteo-city">
               <h1 id="citySearch">{props.defaultCity}</h1>
-              <h2 id="currentDate">{WeatherData.date}</h2>
-              <div id="description" class="text-capitalize">
+              <h2 id="currentDate">
+                <FormattedDate format={WeatherData.date} />
+              </h2>
+              <div id="description" className="text-capitalize">
                 {WeatherData.description}
               </div>
               Humidity: <span id="precipitation">{WeatherData.humidity}</span>%
