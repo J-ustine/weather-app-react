@@ -17,6 +17,7 @@ export default function Container(props) {
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       description: response.data.weather[0].description,
+      icon: response.data.weather[0].icon,
     });
   }
 
@@ -62,7 +63,7 @@ export default function Container(props) {
         <div className="row">
           <WeatherInfo data={WeatherData} />
           <Temperature data={WeatherData} />
-          <Icon />
+          <Icon data={WeatherData} />
         </div>
         <div className="row prevision" id="forecast"></div>
       </div>
