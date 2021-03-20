@@ -61,12 +61,11 @@ button {
   border: none;
 }
 .active {
-  text-decoration: none;
+  text-decoration: underline;
   color: #043d15;
 }
 .active:hover {
   text-decoration: none;
-  color: #043d15;
 }
 #number {
   font-size: 90px;
