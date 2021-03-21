@@ -9,7 +9,7 @@ export default function Footer() {
         rel="noreferrer"
       >
         Open-source code
-      </a>
+      </a>{" "}
       by Justine Collache
     </span>
   );

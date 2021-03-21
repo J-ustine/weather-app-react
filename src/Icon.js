@@ -23,13 +23,11 @@ export default function Icon(props) {
     "50n": "FOG",
   };
   return (
-    <div className="col-2">
-      <ReactAnimatedWeather
-        icon={codeMapping[props.data.icon]}
-        color="white"
-        size={150}
-        animate={true}
-      />
-    </div>
+    <ReactAnimatedWeather
+      icon={codeMapping[props.code]}
+      color="white"
+      size={150}
+      animate={true}
+    />
   );
 }

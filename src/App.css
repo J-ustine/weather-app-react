@@ -70,9 +70,13 @@ button {
 #number {
   font-size: 90px;
 }
-canvas {
+.icon {
   margin: 20px 0 0 0;
   width: 150px;
+}
+.icon-prevision canvas {
+  margin: 5px 0;
+  width: 50px;
 }
 h1 {
   margin: 10px 0 0 0;
@@ -82,22 +86,20 @@ h2 h1 {
 }
 .day {
   margin-top: 10px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.336);
   text-align: center;
   position: relative;
   border: 1px solid #000000;
+  border-radius: 10px;
   color: black;
   transition: all 200ms ease-in-out;
   box-shadow: 3px 3px 3px #043d15;
-}
-.day:hover {
-  color: #ffff00;
-  text-shadow: 1px 1px 1px black;
 }
 .minMax {
   font-size: 12px;
 }
 .footer {
+  margin-top: 10px;
   font-family: "Calibri";
   color: white;
   text-align: center;

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
 import Temperature from "./Temperature";
+import Forecast from "./Forecast";
 import Icon from "./Icon";
 import axios from "axios";
 
@@ -63,9 +64,11 @@ export default function Container(props) {
         <div className="row">
           <WeatherInfo data={WeatherData} />
           <Temperature data={WeatherData} />
-          <Icon data={WeatherData} />
+          <div className="col-2 icon">
+            <Icon code={WeatherData.icon} />
+          </div>
         </div>
-        <div className="row prevision" id="forecast"></div>
+        <Forecast city={WeatherData.city} />
       </div>
     );
   } else {
