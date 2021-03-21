@@ -41,7 +41,7 @@ export default function Container(props) {
     return (
       <div className="container">
         <div className="row">
-          <div className="col-11">
+          <div className="col">
             <form id="search" onSubmit={handleSubmit}>
               <input
                 type="text"
@@ -51,14 +51,6 @@ export default function Container(props) {
                 onChange={defineCity}
               />
             </form>
-          </div>
-          <div className="col-1">
-            <img
-              className="location"
-              src="https://www.materialui.co/materialIcons/communication/location_on_white_192x192.png"
-              alt="location-icon"
-              width="35"
-            />
           </div>
         </div>
         <div className="row">
