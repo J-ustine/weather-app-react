@@ -23,7 +23,7 @@ export default function HourForecast(props) {
   }
 
   return (
-    <div className="col">
+    <div className="col-lg col-sm-12">
       <div className="day">
         {hours()}
         <br />

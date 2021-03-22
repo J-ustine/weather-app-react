@@ -19,17 +19,12 @@ export default function Temperature(props) {
       <div className="col-4">
         <div className="temperature">
           <span id="number">{Math.round(props.data.temperature)}</span>
-          <button id="celsius" className="unit">
-            °C
-          </button>
-          <span className="unit"> |</span>
-          <button
-            id="fahrenheit"
-            className="active unit"
-            onClick={showFahrenheit}
-          >
-            °F
-          </button>
+          <span className="unit">
+            <button id="celsius">°C |</button>
+            <button id="fahrenheit" onClick={showFahrenheit}>
+              °F
+            </button>
+          </span>
         </div>
       </div>
     );
@@ -38,13 +33,12 @@ export default function Temperature(props) {
       <div className="col-4">
         <div className="temperature">
           <span id="number">{Math.round(fahrenheit())}</span>
-          <button id="celsius" className="active unit" onClick={showCelsius}>
-            °C
-          </button>
-          <span className="unit"> |</span>
-          <button id="fahrenheit" className=" unit">
-            °F
-          </button>
+          <span className="unit">
+            <button id="celsius" onClick={showCelsius}>
+              °C
+            </button>
+            <button id="fahrenheit">| °F</button>
+          </span>
         </div>
       </div>
     );

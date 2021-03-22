@@ -42,11 +42,12 @@ export default function Container(props) {
       <div className="container">
         <div className="row">
           <div className="col">
-            <form id="search" onSubmit={handleSubmit}>
+            <form className="form-label" id="search" onSubmit={handleSubmit}>
               <input
                 type="text"
                 placeholder="Enter a city"
                 id="form-input"
+                className="form-control"
                 autoComplete="off"
                 onChange={defineCity}
               />
